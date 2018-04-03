@@ -6,7 +6,6 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var config = require('./config');
 var router = require('./routes');
-var controllers = require('./controllers');
 var bodyParser = require('body-parser');
 
 var app = express();
