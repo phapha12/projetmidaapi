@@ -1,4 +1,4 @@
-var Employe = require('../../models/employe');
+var Employe = require('../../models/employer');
 
 var createEmploye = function(req , res){
   var employe = new Employe(req.body);
@@ -25,9 +25,12 @@ var updateEmploye = function(req ,res){
   Employe.findById(req.params.id, function(err,employe){
     if(err){res.send(500,err);}
 
-    if(req.body.title){employe.title = req.body.title;}
-      if(req.body.body){employe.body = req.body.body;}
-        if(req.body.title){employe.title = req.body.author;}
+    if(req.body.code){employe.code = req.body.code;}
+      if(req.body.nom){employe.nom = req.body.nom;}
+        if(req.body.prenom){employe.prenom = req.body.prenom;}
+        if(req.body.groupe){employe.groupe = req.body.groupe;}
+        if(req.body.status){employe.status = req.body.status;}
+      
 
       employe.save(function(err,employe){
             if(err){res.send(500,err);}

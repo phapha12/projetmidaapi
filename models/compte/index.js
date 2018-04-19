@@ -2,9 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var CompteSchema = new Schema({
-  id: Number,
+  account: Number,
   type: String,
-  solde:Number  
+  solde:Number
 
 });
 

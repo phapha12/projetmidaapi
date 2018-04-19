@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var CompteSchema = new Schema({
+var TransactionSchema = new Schema({
   code: String,
   montant: Number,
-  type:String
+  type:String,
   date:String
   
 });
 
-module.exports = mongoose.model('Compte', CompteSchema);
+module.exports = mongoose.model('Transaction', TransactionSchema);

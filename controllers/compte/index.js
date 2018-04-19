@@ -25,9 +25,9 @@ var updateCompte = function(req ,res){
   Compte.findById(req.params.id, function(err,compte){
     if(err){res.send(500,err);}
 
-    if(req.body.title){compte.title = req.body.title;}
-      if(req.body.body){compte.body = req.body.body;}
-        if(req.body.title){compte.title = req.body.author;}
+    if(req.body.account){compte.account = req.body.account;}
+      if(req.body.type){compte.type = req.body.type;}
+        if(req.body.solde){compte.solde = req.body.solde;}
 
       compte.save(function(err,compte){
             if(err){res.send(500,err);}
