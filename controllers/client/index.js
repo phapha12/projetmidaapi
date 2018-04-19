@@ -25,10 +25,12 @@ var updateClient = function(req ,res){
   Client.findById(req.params.id, function(err,client){
     if(err){res.send(500,err);}
 
-    if(req.body.title){client.title = req.body.title;}
-      if(req.body.body){client.body = req.body.body;}client
-        if(req.body.title){client.title = req.body.author;}
-
+    if(req.body.code){client.code = req.body.code;}
+      if(req.body.nom){client.nom = req.body.nom;}
+        if(req.body.prenom){client.prenom = req.body.prenom;}
+        if(req.body.username){client.username = req.body.username;}
+        if(req.body.password){client.password = req.body.password;}
+        if(req.body.account){client.account = req.body.account;}
       client.save(function(err,client){
             if(err){res.send(500,err);}
             res.json(200,client);

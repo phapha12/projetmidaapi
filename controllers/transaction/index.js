@@ -25,9 +25,10 @@ var updateTransaction = function(req ,res){
   Transaction.findById(req.params.id, function(err,transaction){
     if(err){res.send(500,err);}
 
-    if(req.body.title){transaction.title = req.body.title;}
-      if(req.body.body){transaction.body = req.body.body;}
-        if(req.body.title){transaction.title = req.body.author;}
+    if(req.body.code){transaction.code = req.body.code;}
+      if(req.body.montant){transaction.montant = req.body.montant;}
+        if(req.body.type){transaction.type = req.body.type;}
+        if(req.body.date){transaction.date = req.body.date;}
 
       transaction.save(function(err,transaction){
             if(err){res.send(500,err);}
