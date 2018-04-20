@@ -5,8 +5,10 @@ var EmployeSchema = new Schema({
   code: String,
   nom: String,
   prenom: String,
+  username:String,
+  password:String,
   groupe: String,
-  status:String,
+  status:String
 
 });
 

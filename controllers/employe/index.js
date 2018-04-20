@@ -28,9 +28,11 @@ var updateEmploye = function(req ,res){
     if(req.body.code){employe.code = req.body.code;}
       if(req.body.nom){employe.nom = req.body.nom;}
         if(req.body.prenom){employe.prenom = req.body.prenom;}
+        if(req.body.username){employe.username = req.body.username;}
+        if(req.body.password){employe.password = req.body.password;}
         if(req.body.groupe){employe.groupe = req.body.groupe;}
         if(req.body.status){employe.status = req.body.status;}
-      
+
 
       employe.save(function(err,employe){
             if(err){res.send(500,err);}
