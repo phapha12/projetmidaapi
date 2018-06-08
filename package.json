@@ -1,7 +1,11 @@
 {
   "name": "mabanque",
   "version": "0.0.0",
-  "private": true,
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+      "node": "8.9.1"
+    },
+     "main": "index.js",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -21,4 +25,15 @@
     "passport": "*",
     "passport-jwt": "*"
   }
+  ,
+  "repository": {
+    "type": "git",
+    "url": "https://yakaboi.herokuapp.com/"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
 }
